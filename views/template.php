@@ -75,7 +75,13 @@
            $_GET["ruta"] == "usuarios" ||
            $_GET["ruta"] == "estadisticas" ||
            $_GET["ruta"] == "contacto" ||
-           $_GET["ruta"] == "maquinaria" ||
+           $_GET["ruta"] == "maquina-separacion" ||
+           $_GET["ruta"] == "maquina-horno" ||
+           $_GET["ruta"] == "maquina-molino" ||
+           $_GET["ruta"] == "maquina-tamizador" ||
+           $_GET["ruta"] == "maquina-hidrolisis" ||
+           $_GET["ruta"] == "maquina-filtro" ||
+           $_GET["ruta"] == "maquina-extraccion" ||
            $_GET["ruta"] == "salir" ){
           include "modules/".$_GET["ruta"].".php";
         }else{

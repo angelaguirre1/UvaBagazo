@@ -30,6 +30,7 @@
                 <th style="width:10px";>#</th>
                 <th>Nombre</th>
                 <th>Usuario</th>
+                <th>Foto</th>
                 <th>Email</th>
                 <th>Departamento</th>
                 <th>Estado</th>
@@ -49,15 +50,33 @@
                    echo '<tr>
                    <td>'.$value["id"].'</td>
                    <td>'.$value["nombre"].'</td>
-                   <td>'.$value["usuario"].'</td>
+                   <td>'.$value["usuario"].'</td>';
+
+                   if($value["foto"] != ""){
+                      echo '<td><img src="'.$value["foto"].'" class="img-thumbail" width="40px"></td>';
+                    }else{
+                      echo '<td><img src="views/images/users/default/anonymous.png" class="img-thumbail" width="40px"></td>';
+                    }
+
+                   echo'
                    <td>'.$value["email"].'</td>
-                   <td>'.$value["departamento"].'</td>
-                   <td><button class="btn btn-success btn-xs">Activado</button></td>
-                   <td>4-9-2019 12:12:32</td>
+                   <td>'.$value["departamento"].'</td>';
+
+
+
+                   if($value["estado"] == 1){
+                     echo '<td><button class="btn btn-success btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="0">Activado</button></td>';
+                   }else{
+                    echo '<td><button class="btn btn-danger btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="1">Desactivado</button></td>';
+                   }
+
+                   echo'
+                   
+                   <td>'.$value["ultimo_login"].'</td>
                    <td>
                      <div class="btn-group">
                        <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fa fa-pencil"></i></button>
-                       <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                       <button class="btn btn-danger btnEliminarUsuario" idUsuario="'.$value["id"].'" fotoUsuario="'.$value["foto"].'" usuario="'.$value["usuario"].'"><i class="fa fa-times"></i></button>
                      </div>
                    </td>
                  </tr>';
@@ -98,14 +117,14 @@
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                  <input type="text" class="form-control input-lg" name="nuevoUsuario" placeHolder="Usuario" required>
+                  <input type="text" class="form-control input-lg" id="nuevoUsuario" name="nuevoUsuario" placeHolder="Usuario" required>
                 </div>
               </div>
               <!-- Entrada para el email -->
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                  <input type="email" class="form-control input-lg" name="nuevoEmail" placeHolder="Email" required>
+                  <input type="email" class="form-control input-lg" id="nuevoEmail" name="nuevoEmail" placeHolder="Email" required>
                 </div>
               </div>
               <!-- Entrada para la contrasena -->
@@ -178,7 +197,7 @@
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                  <input type="text" class="form-control input-lg" name="editarUsuario" id="editarUsuario" value="" required>
+                  <input type="text" class="form-control input-lg" name="editarUsuario" id="editarUsuario" value="" readonly>
                 </div>
               </div>
               <!-- Entrada para el email -->
@@ -192,7 +211,8 @@
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                  <input type="password" class="form-control input-lg" name="editarPassword" placeHolder="Password" required>
+                  <input type="password" class="form-control input-lg" name="editarPassword" placeHolder="Password">
+                  <input type="hidden" name="passwordActual" id="passwordActual">
                 </div>
               </div>
               <!-- Entrada de departamento -->
@@ -214,6 +234,7 @@
                 <input type="file" name="editarFoto" class="nuevaFoto">
                 <p class="help-block">Peso maximo 5MB</p>
                 <img src="views/images/users/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
+                <input type="hidden" name="fotoActual" id="fotoActual">
               </div>
 
             </div>
@@ -225,10 +246,15 @@
           </div>
 
           <?php
-           // $crearUsuario = new ControllerUsuarios();
-          //  $crearUsuario -> ctrCrearUsuario();
+            $editarUsuario = new ControllerUsuarios();
+            $editarUsuario -> ctrEditarUsuario();
           ?>
       </form>
     </div>
   </div>
 </div>
+
+<?php
+    $borrarUsuario = new ControllerUsuarios();
+    $borrarUsuario -> ctrBorrarUsuario();
+?>
