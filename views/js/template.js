@@ -1,5 +1,4 @@
 // Sidebar Menu
-
 $('.sidebar-menu').tree()
 
 //Dtata Table

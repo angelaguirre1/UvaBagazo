@@ -15,7 +15,7 @@
    <link rel="icon" href="views/images/template/logo-mini.png">
   
   <!-- PLUGINS DE CSS -->
-  
+
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="views/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
@@ -54,6 +54,7 @@
   <script src="views/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
   <script src="views/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
 
+  
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini login-page">
@@ -82,7 +83,12 @@
            $_GET["ruta"] == "maquina-hidrolisis" ||
            $_GET["ruta"] == "maquina-filtro" ||
            $_GET["ruta"] == "maquina-extraccion" ||
-           $_GET["ruta"] == "salir" ){
+           $_GET["ruta"] == "salir" ||
+           $_GET["ruta"] == "calendario"){
+
+            
+          include "modules/".$_GET["ruta"].".php";
+        }else if($_GET["ruta"] == "eventos"){
           include "modules/".$_GET["ruta"].".php";
         }else{
           include "modules/404.php";
@@ -102,6 +108,14 @@
     ?>
 
     <script src = "views/js/template.js"></script>
+    
+    <!-- <script src="views/js/jquery.min.js"></script> -->
+    <script src="views/js/moment.min.js"></script>
+    <link rel="stylesheet" href="views/css/fullcalendar.min.css">
+    <script src="views/js/fullcalendar.min.js"></script>
+    <script src="views/js/es.js"></script>
+    <script src = "views/js/calendario.js"></script>
     <script src = "views/js/usuarios.js"></script>
+    
 </body>
 </html>

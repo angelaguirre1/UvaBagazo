@@ -31,6 +31,13 @@
                     <span>Usuarios</span>
                 </a>
             </li>
+            
+            <li>
+                <a href="calendario">
+                    <i class="fa fa-calendar"></i>
+                    <span>Calendario</span>
+                </a>
+            </li>
 
             <li>
                 <a href="estadisticas">

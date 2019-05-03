@@ -16,7 +16,9 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
-          
+          <?php
+            include "inicio/cajas-superiores.php";
+          ?>
         </div>
     </section>
-  </div>
+  </div> 
