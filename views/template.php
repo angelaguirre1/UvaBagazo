@@ -76,6 +76,7 @@
            $_GET["ruta"] == "usuarios" ||
            $_GET["ruta"] == "estadisticas" ||
            $_GET["ruta"] == "contacto" ||
+           $_GET["ruta"] == "enviar" ||
            $_GET["ruta"] == "maquina-separacion" ||
            $_GET["ruta"] == "maquina-horno" ||
            $_GET["ruta"] == "maquina-molino" ||
