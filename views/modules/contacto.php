@@ -15,6 +15,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
+        <body>
           <?php
 
           $Nombre = $_POST['Nombre'];
@@ -66,7 +67,29 @@
 
           }
 
-          ?>       
+          ?>
+
+          <label>Nombre*</label> <input id="Nombre" class="form-control" type="text" name="Nombre" /> 
+                  <label>Email*</label> <input id="Email" class="form-control" type="email" name="Email" />
+                </div>
+                  <div class="col-lg-6"><label>Mensaje*</label> 
+                  <textarea id="Mensaje" class="form-control" name="Mensaje" rows="4"></textarea>
+                  </div>
+                  <div class="col-lg-12">
+              <label for="exampleInputFile">Adjuntar archivo</label>
+              <input type="file" name="adjunto" id="archivo-adjunto">
+              <p class="help-block">Example block-level help text here.</p>
+            </div>
+                  <button class="btn btn-default pull-right" type="submit">Enviar</button>
+                </div>
+              </form>
+            </div>
+            
+              <!-- javascript para confirmar datos del formulario.
+              ================================================== -->
+              <!-- La página carga más rapido si estan situados al final del documento. -->
+              <script src="jquery.js"></script>
+              <script src="bootstrap.min.js"></script>
         </div>
     </section>
   </div>
