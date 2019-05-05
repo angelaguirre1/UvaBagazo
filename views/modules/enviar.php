@@ -28,7 +28,7 @@ echo "<script>alert('Los campos marcados con * son obligatorios');location.href 
 
     $mail->From     = $Email;
     $mail->FromName = $Nombre; 
-    $mail->AddAddress("correo@administrativo.com"); // Dirección a la que llegaran los mensajes.
+    $mail->AddAddress("correo@business.com"); // Dirección a la que llegaran los mensajes.
    
 // Aquí van los datos que apareceran en el correo que reciba
     //adjuntamos un archivo 
@@ -48,8 +48,9 @@ echo "<script>alert('Los campos marcados con * son obligatorios');location.href 
 // Datos del servidor SMTP
 
     $mail->IsSMTP(); 
-    $mail->Host = "ssl://smtp.gmail.com:465";  // Servidor de Salida.
+    $mail->Host = "smtp.gmail.com";  // Servidor de Salida.
     $mail->SMTPAuth = true; 
+    $mail->Port = 465;
     $mail->Username = "tucorreo@gmail.com";  // Correo Electrónico
     $mail->Password = "tucontraseña"; // Contraseña
     
