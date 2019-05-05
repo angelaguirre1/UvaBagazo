@@ -17,7 +17,7 @@
 
     <div class="container">
     <!--la propiedad enctype permite el envío de archivos adjuntos en el formulario. -->    
-      <form id="form1" class="well col-lg-12" action="enviar.php" method="post" name="form1" enctype="multipart/form-data">
+      <form id="form1" class="well col-lg-12" action="enviar" method="post" name="form1" enctype="multipart/form-data">
         <div class="row">
         <div class="col-lg-6">
           <label>Nombre*</label> <input id="Nombre" class="form-control" type="text" name="Nombre" /> 
