@@ -23,7 +23,7 @@ echo "<script>alert('Los campos marcados con * son obligatorios');location.href 
 }else{
 
 
-    require("archivosformulario/class.phpmailer.php");
+    require("class.phpmailer.php");
     $mail = new PHPMailer();
 
     $mail->From     = $Email;
