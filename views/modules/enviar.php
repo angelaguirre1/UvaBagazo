@@ -28,7 +28,7 @@ echo "<script>alert('Los campos marcados con * son obligatorios');location.href 
 
     $mail->From     = $Email;
     $mail->FromName = $Nombre; 
-    $mail->AddAddress("sreichel_917u@ymail3.com"); // Dirección a la que llegaran los mensajes.
+    $mail->AddAddress("correo@administrativo.com"); // Dirección a la que llegaran los mensajes.
    
 // Aquí van los datos que apareceran en el correo que reciba
     //adjuntamos un archivo 
