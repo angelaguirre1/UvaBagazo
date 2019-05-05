@@ -88,8 +88,8 @@
               <!-- javascript para confirmar datos del formulario.
               ================================================== -->
               <!-- La página carga más rapido si estan situados al final del documento. -->
-              <script src="jquery.js"></script>
-              <script src="bootstrap.min.js"></script>
+              <script src="js/jquery.js"></script>
+              <script src="js/bootstrap.min.js"></script>
         </div>
     </section>
   </div>
