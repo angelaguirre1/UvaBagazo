@@ -23,15 +23,15 @@
           <label>Nombre*</label> <input id="Nombre" class="form-control" type="text" name="Nombre" /> 
           <label>Email*</label> <input id="Email" class="form-control" type="email" name="Email" />
         </div>
-          <div class="col-lg-6"><label>Mensaje*</label> 
+          <div class="col-lg-5"><label>Mensaje*</label> 
           <textarea id="Mensaje" class="form-control" name="Mensaje" rows="4"></textarea>
           </div>
           <div class="col-lg-12">
       <label for="exampleInputFile">Adjuntar archivo</label>
       <input type="file" name="adjunto" id="archivo-adjunto">
-      <p class="help-block">Example block-level help text here.</p>
+      <p class="help-block"></p>
     </div>
-          <button class="btn btn-default pull-right" type="submit">Enviar</button>
+          <button class="btn btn-default pull-left" type="submit">Enviar</button>
         </div>
       </form>
     </div>
