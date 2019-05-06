@@ -31,8 +31,7 @@
   <!-- Data Tables -->
   <link rel="stylesheet" href="views/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="views/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
-  <!-- Sweetalert2 -->
-  <script src="views/plugins/sweetalert2/sweetalert2.all.js"></script>
+
 
   <!-- PLUGINS DE JAVASCRIP -->
 
@@ -52,8 +51,16 @@
   <script src="views/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
   <script src="views/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
   <script src="views/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
-  <script src="views/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
+  <script src="views/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script> 
+  <!-- Sweetalert2 -->
+  <script src="views/plugins/sweetalert2/sweetalert2.all.js"></script>
+  <!-- InputMask -->
+  <script src="views/plugins/input-mask/jquery.inputmask.js"></script>
+  <script src="views/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+  <script src="views/plugins/input-mask/jquery.inputmask.extensions.js"></script>
 
+  <!-- Jquery Number -->
+  <script src="views/plugins/jqueryNumber/jquerynumber.min.js"></script>
   
 </head>
 
@@ -84,7 +91,14 @@
            $_GET["ruta"] == "maquina-filtro" ||
            $_GET["ruta"] == "maquina-extraccion" ||
            $_GET["ruta"] == "salir" ||
-           $_GET["ruta"] == "calendario"){
+           $_GET["ruta"] == "calendario" ||
+           $_GET["ruta"] == "enviar" ||
+           $_GET["ruta"] == "clientes" ||
+           $_GET["ruta"] == "categorias" ||
+           $_GET["ruta"] == "productos" ||
+           $_GET["ruta"] == "ventas" ||
+           $_GET["ruta"] == "crear-venta" ||
+           $_GET["ruta"] == "reportes"){
 
             
           include "modules/".$_GET["ruta"].".php";
@@ -116,6 +130,10 @@
     <script src="views/js/es.js"></script>
     <script src = "views/js/calendario.js"></script>
     <script src = "views/js/usuarios.js"></script>
+    <script src = "views/js/categorias.js"></script>
+    <script src = "views/js/productos.js"></script>
+    <script src = "views/js/clientes.js"></script>
+    <script src = "views/js/ventas.js"></script>
     
 </body>
 </html>

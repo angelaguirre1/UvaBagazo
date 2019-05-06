@@ -15,7 +15,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
-          
+          <?php echo "hola mundo"; ?>
         </div>
     </section>
   </div>
