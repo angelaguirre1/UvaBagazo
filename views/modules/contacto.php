@@ -31,7 +31,7 @@
       <input type="file" name="adjunto" id="archivo-adjunto">
       <p class="help-block"></p>
     </div>
-          <button class="btn btn-default pull-left" type="submit">Enviar</button>
+          <button class="btn btn-primary pull-left" style="margin-left:15px" type="submit">Enviar</button>
         </div>
       </form>
     </div>
@@ -45,7 +45,7 @@
     </body>
     <section class="content">
         <div class="row">
-          <?php echo "hola mundo"; ?>
+          
         </div>
     </section>
   </div>
